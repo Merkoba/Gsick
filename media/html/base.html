@@ -1,0 +1,110 @@
+<!-- ant jet ant jet -->
+
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+
+    <link rel="stylesheet" type="text/css" href="/site_media/css/base.css?v=1"> 
+
+	<link rel="stylesheet" type="text/css" href="/site_media/css/colorpicker.css"> 
+
+    <link rel="shortcut icon" href="/site_media/img/favicon.ico?v=1" type="image/x-icon"> 
+
+    <script type="text/javascript" src="/site_media/js/jquery.js"></script>
+    <script type="text/javascript" src="/site_media/js/timeago.js"></script>
+    <script type="text/javascript" src="/site_media/js/nicescroll.js"></script>
+    <script type="text/javascript" src="/site_media/js/colorpicker.js"></script>
+    <script type="text/javascript" src="//www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+	<script src="/site_media/js/base.js?v=1"></script>
+
+    <script type="text/javascript">
+    	loggedin = "{{loggedin}}";
+		tehusername = "{{username}}";
+		first_time = "{{first_time}}";
+		theme_background = "{{background}}";
+		theme_text = "{{text}}";
+		theme_link = "{{link}}";
+		theme_input_background = "{{input_background}}";
+		theme_input_text = "{{input_text}}";
+		theme_input_border = "{{input_border}}";
+		theme_input_placeholder = "{{input_placeholder}}";
+		theme_scroll_background = "{{scroll_background}}";
+		embed_option = "{{embed_option}}";
+		csrf_token = "{{csrf_token}}";
+        $(function()
+        {
+            init("{{mode}}","{{info}}");
+        })
+     </script>
+</head>
+
+<body>
+
+<div id="header" class='unselectable'>
+		<input type='hidden' id='mode' value='{{mode}}'>
+		<div style='width:100%;display:table;table-layout:fixed'> 
+			<div style='text-align:center;display:table-cell'>
+                <div class='unselectable' id='cname'> gsick </div>
+            </div>
+		</div>
+</div>
+
+<div class="colmask threecol" id='colmask'>
+	<div class="colmid">
+		<div class="colleft">
+			<div id="centercol" class="col1">
+					<div style='max-height:100%'>
+						<div id='inputcontent_holder' style="width:60%; margin:0 auto;">
+							<textarea rows=1 id='inputcontent' name="inputcontent"></textarea>
+                        </div>
+                        <div id='topmenu'></div>
+						<div id='post_holder' style='height:100% auto; padding-top:25px'>
+							<div id='postscroller'><div id='posts'></div></div>
+					   </div>
+                    </div>
+					<br><br>
+			</div>
+			<div id="leftcol" class="col2">
+			</div>
+			<div id="rightcol" class="col3">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id='overlay' onclick='hide_overlay()'></div>
+
+<div id='goto_dialog'>
+	<div class='goto_label'>go to channel</div>
+	<input id='goto_input'>
+	<div style='padding-bottom: 20px'></div>
+	<div id='channel_list_holder' style='max-height:200px'>
+		<div id='channel_list_scroller' style='max-height:200px'>
+			<div id='channel_list'></div>
+		</div>
+	</div>
+	<div style='padding-bottom: 20px'></div>
+</div>
+
+<div id='information_popup'>
+	<div id='information_holder' style='max-height:480px'>
+		<div id='information_scroller' style='max-height:480px'>
+			<div id='information'></div>
+		</div>
+	</div>
+</div>
+
+<div id='mini_information_popup'>
+	<div id='mini_information_holder' style='max-height:280px'>
+		<div id='mini_information_scroller' style='max-height:280px'>
+			<div id='mini_information'></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
